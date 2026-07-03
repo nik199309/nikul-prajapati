@@ -213,8 +213,10 @@ function ProjectSlider({ projects }) {
   const maxIndex = Math.max(0, total - perPage);
 
   useEffect(() => {
-    if (current > maxIndex) setCurrent(maxIndex);
-  }, [perPage, maxIndex]);
+    if (current > maxIndex) {
+        setCurrent(maxIndex);
+    }
+}, [current, maxIndex]);
 
   const go = (dir) => {
     if (animating) return;
@@ -613,7 +615,7 @@ export default function NikulPortfolio() {
               <div style={{ textAlign: "center", position: "relative", zIndex: 2 }}>
                 <div style={{ width: 120, height: 120, borderRadius: "50%", background: "linear-gradient(135deg,#6C63FF,#8B5CF6)", margin: "0 auto 16px", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 40, fontWeight: 900, animation: "glowPulse 3s ease-in-out infinite" }}>NP</div>
                 <div style={{ color: "#ccc", fontSize: 14, fontWeight: 500 }}>Frontend Developer</div>
-                <div style={{ marginTop: 12, display: "flex", gap: 8, justifyContent: "center", display: "none" }}>
+                <div style={{ marginTop: 12, gap: 8, justifyContent: "center", display: "none" }}>
                   <div style={{ background: "#FFD70022", border: "1px solid #FFD70055", borderRadius: 8, padding: "4px 12px", fontSize: 11, color: "#FFD700" }}>⭐ Top Rated on Upwork</div>
                 </div>
               </div>
