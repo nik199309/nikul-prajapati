@@ -341,8 +341,8 @@ export default function NikulPortfolio() {
     setFormStatus("sending");
     try {
       await emailjs.send(
-        "YOUR_SERVICE_ID",    // ← Replace with your EmailJS Service ID
-        "YOUR_TEMPLATE_ID",   // ← Replace with your EmailJS Template ID
+        "service_3zihjmd",    // ← Replace with your EmailJS Service ID
+        "template_xyz789",   // ← Replace with your EmailJS Template ID
         {
           from_name:  formData.name,
           from_email: formData.email,
@@ -350,7 +350,7 @@ export default function NikulPortfolio() {
           message:    formData.message,
           to_email:   "prajapatinikulbhai91@gmail.com",
         },
-        "YOUR_PUBLIC_KEY"     // ← Replace with your EmailJS Public Key
+        "ffT4A8UjFodez-PG7"     // ← Replace with your EmailJS Public Key
       );
       setFormStatus("success");
       setFormData({ name: "", email: "", budget: "", message: "" });
