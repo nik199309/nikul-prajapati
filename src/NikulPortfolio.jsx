@@ -342,7 +342,7 @@ export default function NikulPortfolio() {
     try {
       await emailjs.send(
         "service_3zihjmd",    // ← Replace with your EmailJS Service ID
-        "template_xyz789",   // ← Replace with your EmailJS Template ID
+        "template_gfp7u3y",   // ← Replace with your EmailJS Template ID
         {
           from_name:  formData.name,
           from_email: formData.email,
